@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: system-ui, "Malgun Gothic", sans-serif; width: 260px; margin: 0; padding: 14px; font-size: 13px; color: #222; }
+  h1 { font-size: 15px; margin: 0 0 12px; }
+  label { display: flex; align-items: center; justify-content: space-between; margin: 10px 0; gap: 8px; }
+  input[type=number] { width: 60px; }
+  .hint { color: #777; font-size: 11px; margin-top: 12px; line-height: 1.4; }
+  #saved { color: #2a8; font-size: 11px; height: 14px; }
+</style>
+</head>
+<body>
+  <h1>먼작귀 엔딩 스킵</h1>
+  <label>켜기 <input type="checkbox" id="enabled"></label>
+  <label>끝에서 몇 초 남았을 때 넘기기 <input type="number" id="secondsFromEnd" min="1" max="120"></label>
+  <label>먼작귀 영상에서만 <input type="checkbox" id="onlyThisPlaylist"></label>
+  <div id="saved"></div>
+  <div class="hint">기본값 29초 = 1:31짜리 회차에서 약 1:01(엔딩 시작)에 넘어갑니다. 노래가 살짝 들리면 숫자를 1~2 올리고, 본편이 잘리면 내려 주세요.</div>
+  <script src="popup.js"></script>
+</body>
+</html>

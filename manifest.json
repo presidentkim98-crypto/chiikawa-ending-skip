@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "먼작귀 엔딩 스킵",
+  "version": "1.1.0",
+  "description": "애니박스 먼작귀 재생목록에서 엔딩곡이 나오면 자동으로 다음 회차로 넘어갑니다.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "먼작귀 엔딩 스킵"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
